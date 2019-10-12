@@ -15,6 +15,7 @@ class Cell_ViewController: UITableViewCell {
     @IBOutlet weak var lbl_Fabricacion: UILabel!
     @IBOutlet weak var lbl_Matricula: UILabel!
     @IBOutlet weak var lbl_Modelo: UILabel!
+    @IBOutlet weak var imgCarro: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -26,6 +27,7 @@ class Cell_ViewController: UITableViewCell {
     lbl_Fabricacion.text = Modelo.Fabricacion
     lbl_Matricula.text = Modelo.Placa
     lbl_Modelo.text = Modelo.Modelo
+    imgCarro.image = Modelo.Imagen
         
         
         

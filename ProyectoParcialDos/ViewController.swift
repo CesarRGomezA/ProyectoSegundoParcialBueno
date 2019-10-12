@@ -27,12 +27,19 @@ class ViewController: UIViewController {
     func createArray() -> [Modelo_Autos]{
         var tempLista: [Modelo_Autos] = []
         
-        let L1  = Modelo_Autos(Placa: "CCC-222", Conductor: "Jose", Marca: "Ford", Modelo: "Escape", Fabricacion: "2019")
-        let L2 = Modelo_Autos(Placa: "CCC-333", Conductor: "Juan", Marca: "Toyota", Modelo: "Yaris", Fabricacion: "2009")
+        let L1  = Modelo_Autos(Placa: "AAA-111", Conductor: "Jose", Marca: "Ford", Modelo: "Escape", Fabricacion: "2019", Imagen: UIImage(named: "Escape"))
+        let L2 = Modelo_Autos(Placa: "BBB-222", Conductor: "Juan", Marca: "Toyota", Modelo: "Yaris", Fabricacion: "2009", Imagen: UIImage(named: "Yaris"))
+        let L3 = Modelo_Autos(Placa: "CCC-444", Conductor: "Javier", Marca: "BMW", Modelo: "Mini cooper", Fabricacion: "2016", Imagen: UIImage(named: "Mini cooper"))
+        let L4 = Modelo_Autos(Placa: "DDD-555", Conductor: "Juancha", Marca: "KIA", Modelo: "Soul", Fabricacion: "2018", Imagen: UIImage(named: "Soul"))
+        let L5 = Modelo_Autos(Placa: "EEE-666", Conductor: "Pancracio", Marca: "Ford", Modelo: "Focus", Fabricacion: "2005", Imagen: UIImage(named: "Focus"))
+        let L6 = Modelo_Autos(Placa: "DDD-777", Conductor: "LaChona", Marca: "Toyota", Modelo: "Mcqueen", Fabricacion: "2014", Imagen: UIImage(named: "Mcqueen"))
         
         tempLista.append(L1)
         tempLista.append(L2)
-        
+        tempLista.append(L3)
+        tempLista.append(L4)
+        tempLista.append(L5)
+        tempLista.append(L6)
         
         return tempLista
     }

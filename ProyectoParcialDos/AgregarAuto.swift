@@ -21,7 +21,7 @@ class AgregarAuto: UIViewController {
     
     @IBAction func act_AgregarCarro(_ sender: Any) {
         
-     let NuevoModelo = Modelo_Autos(Placa: tf_Placa.text!, Conductor: tf_conductor.text, Marca: tf_Marca.text, Modelo: tf_Modelo.text, Fabricacion: tf_Año.text)
+        let NuevoModelo = Modelo_Autos(Placa: tf_Placa.text!, Conductor: tf_conductor.text, Marca: tf_Marca.text, Modelo: tf_Modelo.text, Fabricacion: tf_Año.text, Imagen: UIImage(named: "Carro"))
         
         nuevoAuto?(NuevoModelo)
         

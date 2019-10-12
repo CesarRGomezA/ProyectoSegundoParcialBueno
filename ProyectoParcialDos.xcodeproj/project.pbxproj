@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13A570382351510F002DC2AF /* CargaGasolinaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A570372351510F002DC2AF /* CargaGasolinaController.swift */; };
+		13A5703A2351585D002DC2AF /* modelo_CargaGasolina.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A570392351585D002DC2AF /* modelo_CargaGasolina.swift */; };
+		13A5703C23515BDC002DC2AF /* CeldaCargaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A5703B23515BDC002DC2AF /* CeldaCargaTableViewCell.swift */; };
 		3D4D377C234D24F20049540C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4D377B234D24F20049540C /* AppDelegate.swift */; };
 		3D4D377E234D24F20049540C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4D377D234D24F20049540C /* ViewController.swift */; };
 		3D4D3781234D24F20049540C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D4D377F234D24F20049540C /* Main.storyboard */; };
@@ -38,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		13A570372351510F002DC2AF /* CargaGasolinaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CargaGasolinaController.swift; sourceTree = "<group>"; };
+		13A570392351585D002DC2AF /* modelo_CargaGasolina.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = modelo_CargaGasolina.swift; sourceTree = "<group>"; };
+		13A5703B23515BDC002DC2AF /* CeldaCargaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeldaCargaTableViewCell.swift; sourceTree = "<group>"; };
 		3D4D3778234D24F20049540C /* ProyectoParcialDos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProyectoParcialDos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D4D377B234D24F20049540C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D4D377D234D24F20049540C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +121,9 @@
 				3D4D3787234D24F40049540C /* Info.plist */,
 				3DE8136B23511CE500421037 /* AgregarAuto.swift */,
 				3DE8136F2351249E00421037 /* CargasViewController.swift */,
+				13A570372351510F002DC2AF /* CargaGasolinaController.swift */,
+				13A570392351585D002DC2AF /* modelo_CargaGasolina.swift */,
+				13A5703B23515BDC002DC2AF /* CeldaCargaTableViewCell.swift */,
 			);
 			path = ProyectoParcialDos;
 			sourceTree = "<group>";
@@ -268,12 +277,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13A5703A2351585D002DC2AF /* modelo_CargaGasolina.swift in Sources */,
+				13A570382351510F002DC2AF /* CargaGasolinaController.swift in Sources */,
 				862AB579234E89FF0028B5A0 /* Modelo.swift in Sources */,
 				3D4D377E234D24F20049540C /* ViewController.swift in Sources */,
 				862AB57B234E8F4D0028B5A0 /* Cell_ViewController.swift in Sources */,
 				3D4D377C234D24F20049540C /* AppDelegate.swift in Sources */,
 				3DE8136C23511CE500421037 /* AgregarAuto.swift in Sources */,
 				3DE813702351249E00421037 /* CargasViewController.swift in Sources */,
+				13A5703C23515BDC002DC2AF /* CeldaCargaTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

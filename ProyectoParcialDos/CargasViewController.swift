@@ -10,9 +10,15 @@ import UIKit
 
 class CargasViewController: UIViewController {
 
+    @IBOutlet weak var tb_CargasGasolina: UITableView!
+    var CargasGasolina : [Modelo_Autos] = []
+    
     @IBOutlet weak var btn_Guardar: UIBarButtonItem!
+    
     var AutoCreado : Modelo_Autos?
     var estadoBoton : Bool?
+    
+    
     
     var editAuto : ((Modelo_Autos) -> Void)?
     
@@ -22,8 +28,11 @@ class CargasViewController: UIViewController {
     @IBOutlet weak var tf_Marca: UITextField!
     @IBOutlet weak var tf_Modelo: UITextField!
     @IBOutlet weak var tf_Año: UITextField!
+
+    @IBOutlet weak var tf_imagen: UIImageView!
+    
     @IBAction func act_Editar(_ sender: Any) {
-        
+    
         if estadoBoton == false{
             
         btn_Guardar.title = "Guardar"
@@ -34,18 +43,20 @@ class CargasViewController: UIViewController {
         tf_Modelo.isEnabled = true
         tf_Año.isEnabled = true
             
+            
         estadoBoton = true
             
         }
         else{
             
-            let NuevoModelo = Modelo_Autos(Placa: tf_Placa.text!, Conductor: tf_Conductor.text, Marca: tf_Marca.text, Modelo: tf_Modelo.text, Fabricacion: tf_Año.text)
+            let NuevoModelo = Modelo_Autos(Placa: tf_Placa.text!, Conductor: tf_Conductor.text, Marca: tf_Marca.text, Modelo: tf_Modelo.text, Fabricacion: tf_Año.text, Imagen: tf_imagen.image)
             
             editAuto!(NuevoModelo)
             
             estadoBoton = false
             
             navigationController?.popViewController(animated: true)
+            
             
         }
         
@@ -60,7 +71,7 @@ class CargasViewController: UIViewController {
         tf_Marca.text = AutoCreado?.Marca
         tf_Modelo.text = AutoCreado?.Modelo
         tf_Año.text = AutoCreado?.Fabricacion
-        
+        tf_imagen.image = AutoCreado?.Imagen
         
         tf_Placa.isEnabled = false
         tf_Conductor.isEnabled = false
@@ -69,7 +80,8 @@ class CargasViewController: UIViewController {
         tf_Año.isEnabled = false
         
         
-
+        
+        
     }
     
 

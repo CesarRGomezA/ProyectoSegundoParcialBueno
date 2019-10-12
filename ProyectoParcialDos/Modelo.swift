@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import UIKit
 
 class Modelo_Autos  {
     var Placa: String
@@ -15,6 +15,28 @@ class Modelo_Autos  {
     var Marca : String?
     var Modelo : String?
     var Fabricacion : String?
+    var Imagen : UIImage?
+    
+    
+    init(Placa: String,Conductor : String?,Marca : String?,Modelo : String?,Fabricacion : String?, Imagen : UIImage?) {
+        
+        self.Placa = Placa
+        
+        if let M_conductor = Conductor{
+            self.Conductor = M_conductor
+        }
+        if let M_marca = Marca{
+            self.Marca = M_marca
+        }
+        if let M_modelo = Modelo{
+            self.Modelo = M_modelo
+        }
+        if let M_fabricacion = Fabricacion{
+            self.Fabricacion = M_fabricacion
+        }
+        self.Imagen = Imagen
+        
+    }
     
     init(Placa: String,Conductor : String?,Marca : String?,Modelo : String?,Fabricacion : String?) {
         
@@ -32,7 +54,9 @@ class Modelo_Autos  {
         if let M_fabricacion = Fabricacion{
             self.Fabricacion = M_fabricacion
         }
+      
         
     }
+    
     
 }
