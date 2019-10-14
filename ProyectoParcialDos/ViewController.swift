@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var Lista : [Modelo_Autos] = []
+    var cargas : [modelo_CargaGasolina] = []
     var Fila : Int?
     
     override func viewDidLoad() {
@@ -44,6 +45,12 @@ class ViewController: UIViewController {
         return tempLista
     }
     
+    func agregarCarga(carga: modelo_CargaGasolina){
+        
+        cargas.append(carga)
+        tableView.reloadData()
+        
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToNuevoAuto"{
@@ -56,6 +63,8 @@ class ViewController: UIViewController {
         if segue.identifier == "goToCargas"{
             
             let controllerDestination = segue.destination as? CargasViewController
+            controllerDestination?.callbackAgregarCarga = agregarCarga
+            
             
             let indexPath = tableView.indexPath(for: (sender as? UITableViewCell)!)
             
@@ -65,6 +74,9 @@ class ViewController: UIViewController {
             
             controllerDestination?.AutoCreado = listDestination
             controllerDestination?.editAuto = editarAuto
+            
+            
+            
             
         }
         
@@ -102,6 +114,8 @@ extension ViewController :UITableViewDelegate, UITableViewDataSource{
         return cell
         
     }
+    
+  
     
 
     

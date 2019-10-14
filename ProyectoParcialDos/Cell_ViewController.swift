@@ -29,8 +29,6 @@ class Cell_ViewController: UITableViewCell {
     lbl_Modelo.text = Modelo.Modelo
     imgCarro.image = Modelo.Imagen
         
-        
-        
     }
 
 

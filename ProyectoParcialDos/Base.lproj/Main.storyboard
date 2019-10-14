@@ -201,7 +201,7 @@
                                                     <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="K7m-QO-b1Z" kind="show" id="5tp-rz-jnF"/>
+                                                    <segue destination="K7m-QO-b1Z" kind="show" identifier="GoToAgregarNuevaCarga" id="5tp-rz-jnF"/>
                                                 </connections>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LyQ-oh-aFo">
@@ -229,7 +229,7 @@
                                     <constraint firstAttribute="height" constant="325" id="ed7-we-pXF"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="62" id="JXJ-be-1lM">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellGasolina" rowHeight="62" id="JXJ-be-1lM" customClass="CeldaCargaTableViewCell" customModule="ProyectoParcialDos" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="62"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JXJ-be-1lM" id="ECM-sy-rf3">
@@ -258,8 +258,16 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.64282416600000003" green="1" blue="0.52072351920000004" alpha="0.9191791373" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="lbl_Cantidad" destination="w7l-vx-QN0" id="ac9-oT-Bvf"/>
+                                            <outlet property="lbl_Litros" destination="MA8-eE-1yG" id="DVm-I4-UtN"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="gqz-Eh-GwS" id="bkI-fU-drP"/>
+                                    <outlet property="delegate" destination="gqz-Eh-GwS" id="ra1-mJ-ju0"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -285,6 +293,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="btn_Guardar" destination="O0a-Wa-JVS" id="5hX-fG-8lY"/>
+                        <outlet property="tb_CargasGasolina" destination="wNo-yQ-Cgx" id="Agd-X0-12X"/>
                         <outlet property="tf_Año" destination="t84-cc-4Um" id="9sW-m1-liJ"/>
                         <outlet property="tf_Conductor" destination="SKM-F0-2La" id="kY3-09-mBr"/>
                         <outlet property="tf_Marca" destination="P8o-Gv-RBN" id="RvM-RX-Lcp"/>

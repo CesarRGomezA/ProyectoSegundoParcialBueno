@@ -22,5 +22,11 @@ class CeldaCargaTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    func set(Modelo: modelo_CargaGasolina)
+    {
+        lbl_Cantidad.text = Modelo.Cantidad
+        lbl_Litros.text = Modelo.Litros
+    }
 
 }
